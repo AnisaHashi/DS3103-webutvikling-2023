@@ -7,6 +7,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DriverContext>(opt =>
     opt.UseInMemoryDatabase("DriverList"));
+
+    builder.Services.AddDbContext<TeamContext>(opt =>
+    opt.UseInMemoryDatabase("TeamList"));
+
+    builder.Services.AddDbContext<RaceContext>(opt =>
+    opt.UseInMemoryDatabase("RaceList"));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
