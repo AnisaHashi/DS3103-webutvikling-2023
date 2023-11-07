@@ -6,4 +6,5 @@ public class Team
     public string? Manufacturer { get; set; }
     public string? DriverOne { get; set; }
     public string? DriverTwo { get; set; }
+    //Image
 }
