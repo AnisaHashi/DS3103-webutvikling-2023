@@ -30,14 +30,14 @@ export function Navbar() {
                 </Link>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link text-white fs-5" href="#">
+                <Link to={"/teams"} className="nav-link text-white fs-5">
                   Teams
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link text-white fs-5" href="#">
+                <Link to={"/races"} className="nav-link text-white fs-5">
                   Races
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
