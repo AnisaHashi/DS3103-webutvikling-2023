@@ -1,14 +1,21 @@
-import { useState } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+
 import { Navbar } from "./components/Navbar";
+import { Drivers } from "./pages/Drivers";
+import { Teams } from "./pages/Teams";
+import { Home } from "./pages/Home";
+import { Races } from "./pages/Races";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-    </div>
+      <Routes>
+        <Route index path="/" element={<Home />}></Route>
+        <Route index path="/drivers" element={<Drivers />}></Route>
+        <Route path="/teams" element={<Teams />}></Route>
+        <Route path="/races" element={<Races />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
