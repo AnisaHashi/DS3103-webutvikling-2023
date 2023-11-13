@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 async function getRaces() {
   try {
-    // Hent løpsdata fra serveren eller lokal JSON-fil
-    const response = await fetch("/api/Race"); // Endre dette til din faktiske backend-endepunkt
+    
+    const response = await fetch("/api/Race");
     const data = await response.json();
     return data;
   } catch (error) {

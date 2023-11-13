@@ -52,7 +52,6 @@ export default function App() {
           />
           <Route path="/races" element={<Races />} />
           <Route path="/new-driver" element={<DriverForm />} />
-          {/* Pass selected drivers and a callback to the TeamForm component */}
           <Route
             path="/new-team"
             element={
