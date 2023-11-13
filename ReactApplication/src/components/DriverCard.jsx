@@ -1,6 +1,6 @@
 export function DriverCard(props) {
   return (
-    <div className="card m-2" style={{ width: "18rem" }}>
+    <div className="card m-2 " style={{ width: "18rem" }}>
       <img
         height={1}
         src="https://placehold.co/100"

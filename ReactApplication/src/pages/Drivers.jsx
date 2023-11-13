@@ -17,7 +17,7 @@ export function Drivers() {
 
   return (
     <div>
-      <div className="d-flex">
+      <div className="d-flex m-3">
         {drivers.map((driver) => (
           <DriverCard driver={driver} />
         ))}

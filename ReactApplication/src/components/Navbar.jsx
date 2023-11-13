@@ -4,7 +4,7 @@ export function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-danger bg-gradient">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand fs-4 " to="/">
           Forumla 1
         </Link>
         <div className="mx-5">
