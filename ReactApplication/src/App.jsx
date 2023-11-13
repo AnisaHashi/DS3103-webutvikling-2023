@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-// import { F1Teams } from "./components/F1Teams";
 import { Drivers } from "./pages/Drivers";
 import { Teams } from "./pages/Teams";
 import { Home } from "./pages/Home";
@@ -9,18 +9,59 @@ import { DriverForm } from "./pages/DriverForm";
 import { TeamForm } from "./pages/TeamForm";
 
 export default function App() {
+  async function getDrivers() {
+    const response = await fetch("/api/Driver");
+    const data = await response.json();
+    return data;
+  }
+
+  const [drivers, setDrivers] = useState([]);
+  const [selectedDrivers, setSelectedDrivers] = useState([]);
+
+  useEffect(() => {
+    getDrivers().then((data) => setDrivers(data));
+  }, []);
+
+  const handleDriverSelect = (driverId) => {
+    setSelectedDrivers((prevSelected) => [
+      ...prevSelected.filter((item) => item !== driverId),
+      driverId,
+    ]);
+  };
+
+  const handleTeamSubmit = () => {};
+
   return (
     <BrowserRouter>
       <Navbar />
-      {/* <F1Teams /> */}
       <div className="container">
         <Routes>
-          <Route index path="/" element={<Home />}></Route>
-          <Route index path="/drivers" element={<Drivers />}></Route>
-          <Route path="/teams" element={<Teams />}></Route>
-          <Route path="/races" element={<Races />}></Route>
-          <Route path="/new-driver" element={<DriverForm />}></Route>
-          <Route path="/new-team" element={<TeamForm />}></Route>
+          <Route index path="/" element={<Home />} />
+          <Route
+            index
+            path="/drivers"
+            element={
+              <Drivers drivers={drivers} onSelectDriver={handleDriverSelect} />
+            }
+          />
+          <Route
+            path="/teams"
+            element={
+              <Teams drivers={drivers} selectedDrivers={selectedDrivers} />
+            }
+          />
+          <Route path="/races" element={<Races />} />
+          <Route path="/new-driver" element={<DriverForm />} />
+          {/* Pass selected drivers and a callback to the TeamForm component */}
+          <Route
+            path="/new-team"
+            element={
+              <TeamForm
+                selectedDrivers={selectedDrivers}
+                onSubmit={handleTeamSubmit}
+              />
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>
