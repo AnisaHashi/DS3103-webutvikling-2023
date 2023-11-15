@@ -9,5 +9,5 @@ public class RaceContext : DbContext
     {
     }
 
-    public DbSet<Race> Race { get; set; } = null!;
+    public DbSet<Race> Race { get; set; }
 }

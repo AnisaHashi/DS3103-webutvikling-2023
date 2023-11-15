@@ -37,9 +37,7 @@ export function TeamForm() {
       const response = await fetch("/api/Driver");
       const data = await response.json();
       setDrivers(data);
-    } catch (error) {
-      console.error("Error fetching drivers:", error);
-    }
+    } catch (error) {}
   };
 
   const generateDriverOption = (driver) => {
@@ -52,7 +50,6 @@ export function TeamForm() {
     const newTeam = {
       driverOne,
       driverTwo,
-      id,
       manufacturer,
     };
 
@@ -101,7 +98,7 @@ export function TeamForm() {
           ))}
         </select>
       </div>
-      <div className="mb-3">
+      {/* <div className="mb-3">
         <label htmlFor="id" className="form-label">
           Id
         </label>
@@ -113,7 +110,7 @@ export function TeamForm() {
           onChange={(event) => setId(event.target.value)}
           className="form-control"
         />
-      </div>
+      </div> */}
       <div className="mb-3">
         <label htmlFor="manufacturer" className="form-label">
           Manufacturer

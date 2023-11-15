@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace WebAPI.Models;
 
 public class Driver
 {
+    [Key]
     public long Id { get; set; }
     public long Age { get; set; }
     public string? Name { get; set; }

@@ -1,18 +1,28 @@
 using Microsoft.EntityFrameworkCore;
+
 using WebAPI.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<DriverContext>(opt =>
-    opt.UseInMemoryDatabase("DriverList"));
+builder.Services.AddDbContext<DriverContext>(options => options.UseSqlite("Data source=Driver.db"));
+builder.Services.AddDbContext<DriverContext>( 
+    options => options
+        .UseSqlite("Data Source=Driver.db")
+);
 
-    builder.Services.AddDbContext<TeamContext>(opt =>
-    opt.UseInMemoryDatabase("TeamList"));
+builder.Services.AddDbContext<TeamContext>(options => options.UseSqlite("Data source=Team.db"));
+builder.Services.AddDbContext<TeamContext>( 
+    options => options
+        .UseSqlite("Data Source=Team.db")
+    );
 
-    builder.Services.AddDbContext<RaceContext>(opt =>
-    opt.UseInMemoryDatabase("RaceList"));
+builder.Services.AddDbContext<RaceContext>(options => options.UseSqlite("Data source=Race.db"));
+builder.Services.AddDbContext<RaceContext>( 
+    options => options
+        .UseSqlite("Data Source=Race.db")
+    );
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
