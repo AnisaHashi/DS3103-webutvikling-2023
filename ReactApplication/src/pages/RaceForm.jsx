@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DateTime } from "../components/DateTime";
 
@@ -20,8 +20,23 @@ export function RaceForm() {
   const [winnerTime, setWinnerTime] = useState(new Date());
   const [grandPrix, setGrandPrix] = useState("");
   const [numberOfLaps, setNumberOfLaps] = useState(0);
+  const [drivers, setDrivers] = useState([]);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchDrivers();
+  }, []);
+
+  const fetchDrivers = async () => {
+    try {
+      const response = await fetch("/api/Driver");
+      const data = await response.json();
+      setDrivers(data);
+    } catch (error) {
+      console.error("Error fetching drivers", error);
+    }
+  };
 
   function submit(event) {
     event.preventDefault();
@@ -33,11 +48,9 @@ export function RaceForm() {
       numberOfLaps,
     };
 
-    console.log(newRace);
-
-    // postRace(newRace).then(() => {
-    //   navigate("/races");
-    // });
+    postRace(newRace).then(() => {
+      navigate("/races");
+    });
   }
 
   const onDateChange = (newDate) => {
@@ -50,14 +63,20 @@ export function RaceForm() {
         <label htmlFor="winnerName" className="form-label">
           Winner Name
         </label>
-        <input
-          type="text"
+        <select
           id="winnerName"
           name="winnerName"
           value={winnerName}
           onChange={(event) => setWinnerName(event.target.value)}
           className="form-control"
-        />
+        >
+          <option value="">Select Driver</option>
+          {drivers.map((driver) => (
+            <option key={driver.id} value={driver.name}>
+              {driver.name}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="mb-3">

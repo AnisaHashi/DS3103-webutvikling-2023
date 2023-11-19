@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { DriverCard } from "../components/DriverCard";
 import { Link } from "react-router-dom";
 
-
 async function getDrivers() {
   const response = await fetch("/api/Driver");
   const data = await response.json();
@@ -55,7 +54,7 @@ export function Drivers({ onSelectDriver }) {
   return (
     <div>
       <h2 className="my-2">F1 Drivers 2023</h2>
-      <div className="d-flex m-3">
+      <div className="d-flex m-3 row">
         {drivers.map((driver) => (
           <DriverCard
             key={driver.id}
