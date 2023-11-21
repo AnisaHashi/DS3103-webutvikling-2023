@@ -131,7 +131,7 @@ export function Races() {
         className="alert alert-info text-center position-fixed top-50 start-50 translate-middle"
         role="alert"
       >
-        <span>No teams registered. </span>
+        <span>No races registered. </span>
         <Link to="/new-race">Register here</Link>
       </div>
     );
