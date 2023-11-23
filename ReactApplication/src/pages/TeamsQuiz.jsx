@@ -20,7 +20,7 @@ const quiz = [
     answer: "Somalia",
   },
 ];
-export function QuizPage() {
+export function TeamsQuizPage() {
   const [index, setIndex] = useState(0);
   const [check, setCheck] = useState(false);
 

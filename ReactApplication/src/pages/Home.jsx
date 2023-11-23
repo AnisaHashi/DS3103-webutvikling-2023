@@ -18,9 +18,9 @@ export function Home() {
                   1-lagene? Start quizen og nyt reisen gjennom spenningen i
                   F1-teamenes univers!
                 </p>
-                <a href="/quiz" class="btn btn-outline-success">
+                <Link to ="/teams-quiz" class="btn btn-outline-success">
                   Spill Quiz
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -34,9 +34,9 @@ export function Home() {
                   Lewis Hamilton, Carlos Sainz, og Fernando Alonso. Skynd deg og
                   start quizen nå for en opplevelse fylt med moro og spenning!
                 </p>
-                <a href="/quiz" class="btn btn-outline-primary">
+                <Link to="/drivers-quiz" class="btn btn-outline-primary">
                   Spill Drivers Quiz
-                </a>
+                </Link>
               </div>
             </div>
           </div>

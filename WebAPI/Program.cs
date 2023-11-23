@@ -18,6 +18,18 @@ builder.Services.AddDbContext<TeamContext>(
         .UseSqlite("Data Source=Team.db")
     );
 
+builder.Services.AddDbContext<TeamsQuizContext>(options => options.UseSqlite("Data source=TeamsQuiz.db"));
+builder.Services.AddDbContext<TeamsQuizContext>( 
+    options => options
+        .UseSqlite("Data Source=TeamQuiz.db") 
+);
+
+builder.Services.AddDbContext<DriversQuizContext>(options => options.UseSqlite("Data source=DriversQuiz.db"));
+builder.Services.AddDbContext<DriversQuizContext>( 
+    options => options
+        .UseSqlite("Data Source=DriversQuiz.db") 
+);
+
 builder.Services.AddDbContext<RaceContext>(options => options.UseSqlite("Data source=Race.db"));
 builder.Services.AddDbContext<RaceContext>( 
     options => options
