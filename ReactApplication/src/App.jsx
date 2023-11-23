@@ -10,6 +10,8 @@ import { TeamForm } from "./pages/TeamForm";
 import { RaceForm } from "./pages/RaceForm";
 import { DriversQuizPage } from "./pages/DriversQuiz";
 import { TeamsQuizPage } from "./pages/TeamsQuiz";
+import { QuizForm } from "./pages/QuizForm";
+import { TeamsQuizForm } from "./pages/TeamsQuizForm";
 
 export default function App() {
   async function getDrivers() {
@@ -58,6 +60,8 @@ export default function App() {
           <Route path="/new-race" element={<RaceForm />} />
           <Route path="/drivers-quiz" element={<DriversQuizPage />} />
           <Route path="/teams-quiz" element={<TeamsQuizPage />} />
+          <Route path="/quiz-form" element={<QuizForm />} />
+          <Route path="/quiz-form-teams" element={<TeamsQuizForm />} />
           <Route
             path="/new-team"
             element={

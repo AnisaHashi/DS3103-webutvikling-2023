@@ -1,26 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Quiz } from "../components/Quiz";
-import { useState } from "react";
 import { Score } from "../components/Score";
+import { Link } from "react-router-dom";
 
-const quiz = [
-  {
-    question: "Which of the following country has largest population?",
-    alternatives: ["Brazil", "Indonisia", "Germany", "India"],
-    answer: "India",
-  },
-  {
-    question: "Which of the following country has smallest population?",
-    alternatives: ["Norge", "Somalia", "Germany", "Turkey"],
-    answer: "Norge",
-  },
-  {
-    question: "Hva kommer du fra?",
-    alternatives: ["Norge", "Somalia", "Germany", "Turkey"],
-    answer: "Somalia",
-  },
-];
+async function getDriversQuiz() {
+  const response = await fetch("/api/DriversQuiz");
+  const data = await response.json();
+  console.log("DATA RESPONSE: ", data);
+
+  const updated = data.map((current) => {
+    return {
+      ...current,
+      alternatives: current.alternatives.split(","),
+    };
+  });
+  return updated;
+}
+
 export function DriversQuizPage() {
+  const [DriversQuiz, setDriversQuiz] = useState([]);
   const [index, setIndex] = useState(0);
   const [check, setCheck] = useState(false);
 
@@ -37,15 +35,23 @@ export function DriversQuizPage() {
     setShowWrongAlert(false);
   };
 
+  useEffect(() => {
+    getDriversQuiz().then((data) => {
+      console.log("data: ", data);
+      setDriversQuiz(data);
+    });
+  }, []);
+
   // Pagination
   const onNext = () => {
     reset();
-    if (index < quiz.length - 1) {
+    if (index < DriversQuiz.length - 1) {
       setIndex(index + 1);
     } else {
       setShowScore(true);
     }
   };
+
   const onPrev = () => {
     reset();
     if (index > 0) {
@@ -56,7 +62,7 @@ export function DriversQuizPage() {
   const checkAnswer = (answer) => {
     setCheck(true);
 
-    const isCorrect = answer === quiz[index].answer;
+    const isCorrect = answer === DriversQuiz[index]?.answer;
     if (isCorrect) {
       setShowSuccessAlert(true);
       setTotalCorrect(totalCorrect + 1);
@@ -65,35 +71,45 @@ export function DriversQuizPage() {
       setTotalWrong(totalWrong + 1);
     }
   };
+
   return (
     <div className="container">
       {showSuccessAlert && (
-        <div class="col-md-8 mt-2 mx-auto alert alert-success" role="alert">
+        <div className="col-md-8 mt-2 mx-auto alert alert-success" role="alert">
           Bravo! That is the correct answer.
         </div>
       )}
 
       {showWrongAlert && (
-        <div class="col-md-8 mt-2 mx-auto alert alert-danger" role="alert">
-          Sorry! That is not correct. Try next one!
+        <div className="col-md-8 mt-2 mx-auto alert alert-danger" role="alert">
+          Sorry! That is not correct. Try the next one!
         </div>
       )}
 
       {showScore === true ? (
-        <Score total={quiz.length} correct={totalCorrect} wrong={totalWrong} />
+        <Score
+          total={DriversQuiz.length}
+          correct={totalCorrect}
+          wrong={totalWrong}
+        />
       ) : (
         <Quiz
-          question={quiz[index].question}
-          alternatives={quiz[index].alternatives}
+          question={DriversQuiz[index]?.question}
+          alternatives={DriversQuiz[index]?.alternatives || []}
           index={index + 1}
-          total={quiz.length}
+          total={DriversQuiz.length}
           onNext={onNext}
           onPrev={onPrev}
           checkAnswer={checkAnswer}
           check={check}
-          answer={quiz[index].answer}
+          answer={DriversQuiz[index]?.answer}
         />
       )}
+      <div className="d-flex justify-content-center mt-3">
+        <Link to="/quiz-form" className="btn btn-outline-success">
+          <span>Legg til mer quiz</span>
+        </Link>
+      </div>
     </div>
   );
 }

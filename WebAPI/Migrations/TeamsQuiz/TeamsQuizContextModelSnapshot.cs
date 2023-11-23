@@ -22,6 +22,10 @@ namespace WebAPI.Migrations.TeamsQuiz
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Alternatives")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Answer")
                         .IsRequired()
                         .HasColumnType("TEXT");

@@ -5,7 +5,7 @@ export function Home() {
   return (
     <div>
       <div>
-        <div class="row mt-5">
+        <div class="row mx-auto mt-5">
           <div class="col-md-6">
             <div class="card text-center">
               <div class="card-body">
@@ -18,8 +18,8 @@ export function Home() {
                   1-lagene? Start quizen og nyt reisen gjennom spenningen i
                   F1-teamenes univers!
                 </p>
-                <Link to ="/teams-quiz" class="btn btn-outline-success">
-                  Spill Quiz
+                <Link to="/teams-quiz" class="btn btn-outline-primary">
+                Spill Teams Quiz
                 </Link>
               </div>
             </div>
