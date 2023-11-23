@@ -2,6 +2,11 @@ import React from "react";
 import "./Quiz.css";
 
 export function Quiz(props) {
+  function getClassName(alternative) {
+    const isCorrect = alternative === props.answer;
+    const className = isCorrect ? "correct" : "wrong";
+    return className;
+  }
   return (
     <div className="container mt-5">
       <div className="d-flex justify-content-center row">
@@ -25,6 +30,8 @@ export function Quiz(props) {
                       type="radio"
                       name={alternative}
                       value={alternative}
+                      className={props.check ? getClassName(alternative) : ""}
+                      onClick={() => props.checkAnswer(alternative)}
                     />
                     <span>{alternative}</span>
                   </label>

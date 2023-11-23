@@ -1,76 +1,48 @@
 import React from "react";
-import { Quiz } from "../components/Quiz";
-import { useState } from "react";
-
-const quiz = [
-  {
-    question: "Which of the following country has largest population?",
-    alternatives: ["Brazil", "Indonisia", "Germany", "India"],
-  },
-  {
-    question: "Which of the following country has smallest population?",
-    alternatives: ["Norge", "Somalia", "Germany", "Turkey"],
-  },
-];
+import { Link } from "react-router-dom";
 
 export function Home() {
-  const [index, setIndex] = useState(0);
-
-  // Pagination
-  const onNext = () => {
-    setIndex(index + 1);
-  };
-  const onPrev = () => {
-    setIndex(index - 1);
-  };
-
   return (
-    <Quiz
-      question={quiz[index].question}
-      alternatives={quiz[index].alternatives}
-      index={index + 1}
-      total={quiz.length}
-      onNext={onNext}
-      onPrev={onPrev}
-      // question="Which of the following country has largest population?"
-      // alternatives={["Brazil", "Indonisia", "Germany", "India"]}
-      // index={1}
-      // total={5}
-    />
-  );
-  return (
-    <div className="bg-dark text-white d-flex p-5 mx-auto">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-12">
-            <h1 className="">Din Hjemmeside</h1>
-            <p>Dette er innholdet på hjemmesiden din.</p>
-
-            <ul className="list-group d-flex justify-content-between">
-              <li className=" list-group-item">
-                <span>
-                  Max <strong>VERSTAPPEN</strong>
-                </span>
-                <span>1:29:08.289</span>
-              </li>
-
-              <li className=" list-group-item">
-                <span>
-                  Charles <strong>LECRESC</strong>{" "}
-                </span>
-                <span className="justfy-content-between">1:29:08.289</span>
-              </li>
-
-              <li className=" list-group-item">
-                <span>
-                  Sergio <strong>PEREZ</strong>{" "}
-                </span>
-                <span>1:29:08.289</span>
-              </li>
-            </ul>
+    <div>
+      <div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">Utforsk Formel 1-lagene!</h5>
+                <p class="card-text">
+                  Formel 1 er ikke bare en kamp mellom førere, men også en
+                  konkurranse mellom de ledende racingteamene. To av de mest
+                  ikoniske lagene er Red Bull Racing og Ferrari. Er du klar for
+                  å teste dine ferdigheter og lære mer om de ledende Formel
+                  1-lagene? Start quizen og nyt reisen gjennom spenningen i
+                  F1-teamenes univers!
+                </p>
+                <a href="/quiz" class="btn btn-outline-success">
+                  Spill Quiz
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">Velkommen til Drivers F1 Quiz!</h5>
+                <p class="card-text">
+                  Utforsk din kunnskap om dagens Formel 1-stjerner. Test deg
+                  selv med spørsmål om førere som Max Verstappen, Sergio Perez,
+                  Lewis Hamilton, Carlos Sainz, og Fernando Alonso. Skynd deg og
+                  start quizen nå for en opplevelse fylt med moro og spenning!
+                </p>
+                <a href="/quiz" class="btn btn-outline-primary">
+                  Spill Drivers Quiz
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div></div>
     </div>
   );
 }
