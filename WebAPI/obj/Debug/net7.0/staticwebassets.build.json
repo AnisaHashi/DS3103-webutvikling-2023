@@ -1,11 +1,105 @@
 {
   "Version": 1,
-  "Hash": "7/8N/7vR8Gil4oF52j1JyaDaDh/w/bwrwTANJiMV94U=",
+  "Hash": "i+rx3lbxZ1iKpxaRn4ejK8whukUXIO64rO+0AWkuwD0=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebAPI/wwwroot",
+      "Source": "WebAPI",
+      "ContentRoot": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/",
+      "BasePath": "_content/WebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/.DS_Store",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
+      "Identity": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/images/dato-ib.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "images/dato-ib.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/dato-ib.png"
+    },
+    {
+      "Identity": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/images/loki.webp",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "images/loki.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/loki.webp"
+    },
+    {
+      "Identity": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/images/m25.jpg",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "images/m25.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/m25.jpg"
+    },
+    {
+      "Identity": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/index.html",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/wwwroot/",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    }
+  ]
 }
