@@ -14,7 +14,7 @@ export function Quiz(props) {
           <div className="border">
             <div className="question bg-white p-3 border-bottom">
               <div className="d-flex flex-row justify-content-between align-items-center mcq">
-                <h4>MCQ Quiz</h4>
+                <h4>F1 Quiz</h4>
                 <span>{`(${props.index} of ${props.total})`}</span>
               </div>
             </div>

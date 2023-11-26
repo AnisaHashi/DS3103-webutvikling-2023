@@ -107,7 +107,7 @@ export function DriversQuizPage() {
       )}
       <div className="d-flex justify-content-center mt-3">
         <Link to="/quiz-form" className="btn btn-outline-success">
-          <span>Legg til mer quiz</span>
+          <span>Legg til mer quiz for drivers</span>
         </Link>
       </div>
     </div>
