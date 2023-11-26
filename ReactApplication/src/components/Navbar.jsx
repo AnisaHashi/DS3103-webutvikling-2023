@@ -4,8 +4,8 @@ export function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-danger bg-gradient">
       <div className="container-fluid">
-        <Link className="navbar-brand fs-4 fw-bold" to="/">
-          Formula 1
+        <Link className="navbar-brand text-white fw-bold" to="/">
+          Speed Master F1
         </Link>
         <div className="mx-5">
           <button

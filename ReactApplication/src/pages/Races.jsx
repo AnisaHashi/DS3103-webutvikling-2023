@@ -58,7 +58,12 @@ export function Races() {
 
   return (
     <div className="container">
-      <h2 className="my-4">2023 RACE RESULTS</h2>
+      <div className="d-flex justify-content-between m-3">
+        <h2 className="my-2">2023 RACE RESULTS</h2>
+        <Link to="/new-race" className="btn  btn-outline-danger">
+          Add Race
+        </Link>
+      </div>
       <table className="table">
         <thead>
           <tr>
@@ -81,12 +86,6 @@ export function Races() {
           ))}
         </tbody>
       </table>
-      <Link
-        to="/new-race"
-        className="btn btn-outline-success position-fixed bottom-0 end-0 m-4"
-      >
-        Add New Race
-      </Link>
     </div>
   );
 }

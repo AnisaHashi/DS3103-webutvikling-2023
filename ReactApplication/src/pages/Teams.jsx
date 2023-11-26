@@ -46,17 +46,15 @@ export function Teams() {
   return (
     <div>
       <div className="d-flex row m-3">
-        <div className="col-12">
-          <h1 className="mt-2 p-2">F1 Teams 2023</h1>
+        <div className="d-flex justify-content-between m-3">
+          <h2 className="my-2">F1 Teams 2023</h2>
+          <Link to="/new-team" className="btn  btn-outline-danger">
+            Add Team
+          </Link>
         </div>
         {teams.map((team) => (
           <TeamCard key={team.id} team={team} onDelete={handleDeleteTeam} />
         ))}
-      </div>
-      <div className="d-flex justify-content-end m-3">
-        <Link to="/new-team" className="btn btn-outline-success">
-          Add Team
-        </Link>
       </div>
     </div>
   );

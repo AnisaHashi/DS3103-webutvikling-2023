@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Carousel } from "../components/Carousel";
 
 export function Home() {
   return (
-    <div>
+    <div className="container">
+      <Carousel />
       <div>
         <div class="row mx-auto mt-5">
           <div class="col-md-6">
@@ -18,7 +20,10 @@ export function Home() {
                   teams? Start the quiz and enjoy the journey through the
                   excitement of the F1 teams' universe!
                 </p>
-                <Link to="/teams-quiz" class="btn btn-outline-primary">
+                <Link
+                  to="/teams-quiz"
+                  className="btn btn-outline-danger bg-gradient"
+                >
                   Play Teams Quiz
                 </Link>
               </div>
@@ -35,7 +40,10 @@ export function Home() {
                   Alonso. Hurry and start the quiz now for an experience filled
                   with fun and excitement!
                 </p>
-                <Link to="/drivers-quiz" class="btn btn-outline-primary">
+                <Link
+                  to="/drivers-quiz"
+                  class="btn btn-outline-danger bg-gradient"
+                >
                   Play Drivers Quiz
                 </Link>
               </div>

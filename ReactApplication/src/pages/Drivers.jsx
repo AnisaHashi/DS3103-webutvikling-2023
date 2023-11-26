@@ -53,7 +53,12 @@ export function Drivers({ onSelectDriver }) {
 
   return (
     <div>
-      <h2 className="my-2">F1 Drivers 2023</h2>
+      <div className="d-flex justify-content-between m-3">
+        <h2 className="my-2">F1 Drivers 2023</h2>
+        <Link to="/new-driver" className="btn  btn-outline-danger">
+          Add Driver
+        </Link>
+      </div>
       <div className="d-flex m-3 row">
         {drivers.map((driver) => (
           <DriverCard
@@ -63,11 +68,6 @@ export function Drivers({ onSelectDriver }) {
             onDelete={() => handleDeleteDriver(driver.id)}
           />
         ))}
-      </div>
-      <div className="d-flex justify-content-end m-3">
-        <Link to="/new-driver" className="btn btn-outline-success">
-          Add Driver
-        </Link>
       </div>
     </div>
   );
