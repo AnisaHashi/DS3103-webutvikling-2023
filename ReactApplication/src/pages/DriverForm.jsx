@@ -1,5 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
+
+async function postDriverImage(file, fileName) {
+  const formData = new FormData();
+  formData.append("file", file, fileName);
+
+  await axios({
+    url: "/api/file",
+    method: "POST",
+    data: formData,
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+
+  formData.delete("file");
+
+  return Promise.resolve();
+}
 
 async function postDriver(newDriver) {
   const response = await fetch("/api/Driver", {
@@ -18,10 +35,11 @@ export function DriverForm() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
   const [nationality, setNationality] = useState("");
+  const [file, setFile] = useState(null);
 
   const navigate = useNavigate();
 
-  function submit(event) {
+  async function submit(event) {
     event.preventDefault();
 
     const newDriver = {
@@ -30,7 +48,14 @@ export function DriverForm() {
       nationality,
     };
 
-    postDriver(newDriver).then(() => navigate("/drivers"));
+    await postDriverImage(file, `${name}.png`);
+    await postDriver(newDriver);
+    navigate("/drivers");
+  }
+
+  function handleImage(event) {
+    let file = event.target.files[0];
+    setFile(file);
   }
 
   return (
@@ -70,6 +95,19 @@ export function DriverForm() {
           onChange={(event) => setNationality(event.target.value)}
           className="form-control"
           id="exampleInputPassword1"
+        />
+      </div>
+
+      <div className="mb-3">
+        <label for="exampleInputPassword1" className="form-label">
+          Image
+        </label>
+        <input
+          type="file"
+          onChange={handleImage}
+          className="form-control"
+          id="exampleInputPassword1"
+          accept="image/png, image/jpeg"
         />
       </div>
 

@@ -2,7 +2,6 @@ import React from "react";
 
 export function DriverCard({ driver, onDelete }) {
   const handleDelete = () => {
-   
     if (typeof onDelete === "function") {
       onDelete(driver.id);
     }
@@ -12,7 +11,7 @@ export function DriverCard({ driver, onDelete }) {
     <div className="driver-card card m-2" style={{ width: "18rem" }}>
       <img
         height={1}
-        src="https://placehold.co/100"
+        src={`http://localhost:5000/images/${driver.name}.png`}
         className="img-fluid"
         alt="Responsive image"
       ></img>
