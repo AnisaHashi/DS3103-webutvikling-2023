@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "adAPEMcD9M9DvEwXIJlHPPwx0t4dj3k2vyahr/0saO2HB3xrRuJ38fzyL18JW/1d6UnC4KVtMZVBsnJ7551RJQ==",
+  "dgSpecHash": "dFnUOYXeFy4=",
   "success": true,
-  "projectFilePath": "/Users/anisaabdullahihashi/Documents/Webutvikling/Exam/DS3103-webutvikling-2023/WebAPI/WebAPI.csproj",
+  "projectFilePath": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/WebAPI.csproj",
   "expectedPackageFiles": [
     "/Users/anisaabdullahihashi/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/anisaabdullahihashi/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
@@ -199,7 +199,10 @@
     "/Users/anisaabdullahihashi/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/anisaabdullahihashi/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
     "/Users/anisaabdullahihashi/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "/Users/anisaabdullahihashi/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
+    "/Users/anisaabdullahihashi/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
+    "/Users/anisaabdullahihashi/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/anisaabdullahihashi/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/anisaabdullahihashi/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.20/microsoft.netcore.app.host.osx-arm64.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }

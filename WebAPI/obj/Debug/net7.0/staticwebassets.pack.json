@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/Abdifatah.png",
+      "PackagePath": "staticwebassets/images/Abdifatah.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/Anisa.png",
+      "PackagePath": "staticwebassets/images/Anisa.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/Fernando.png",
+      "PackagePath": "staticwebassets/images/Fernando.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/Ferrari.png",
+      "PackagePath": "staticwebassets/images/Ferrari.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/HALIMA.png",
+      "PackagePath": "staticwebassets/images/HALIMA.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/Hamilton.png",
+      "PackagePath": "staticwebassets/images/Hamilton.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/Mercedes.png",
+      "PackagePath": "staticwebassets/images/Mercedes.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/images/Sergio.png",
+      "PackagePath": "staticwebassets/images/Sergio.png"
+    },
+    {
+      "Id": "/Users/anisaabdullahihashi/Documents/Webutvikling/Eksam-Webutvikling-2023/DS3103-webutvikling-2023/WebAPI/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.WebAPI.props",
+      "PackagePath": "build\\WebAPI.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\WebAPI.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.WebAPI.props",
+      "PackagePath": "buildTransitive\\WebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

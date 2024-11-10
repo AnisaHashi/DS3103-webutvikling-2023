@@ -1,5 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+async function postTeamImage(file, fileName) {
+  const formData = new FormData();
+  formData.append("file", file, fileName);
+
+  await axios({
+    url: "/api/file",
+    method: "POST",
+    data: formData,
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+
+  formData.delete("file");
+
+  return Promise.resolve();
+}
 
 async function postTeam(newTeam) {
   const response = await fetch("/api/Team", {
@@ -26,6 +43,7 @@ export function TeamForm() {
   const [id, setId] = useState(0);
   const [manufacturer, setManufacturer] = useState("");
   const [drivers, setDrivers] = useState([]);
+  const [file, setFile] = useState();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,14 +62,16 @@ export function TeamForm() {
     return `${driver.name} (ID: ${driver.id})`;
   };
 
-  function submit(event) {
+  async function submit(event) {
     event.preventDefault();
 
     const newTeam = {
       driverOne,
       driverTwo,
       manufacturer,
-    };FF
+    };
+
+    await postTeamImage(file, `${manufacturer}.png`);
 
     postTeam(newTeam).then(() => {
       navigate("/teams");
@@ -121,6 +141,19 @@ export function TeamForm() {
           name="manufacturer"
           value={manufacturer}
           onChange={(event) => setManufacturer(event.target.value)}
+          className="form-control"
+        />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="manufacturer" className="form-label">
+          Image
+        </label>
+        <input
+          type="file"
+          id="file"
+          name="file"
+          onChange={(event) => setFile(event.target.files[0])}
           className="form-control"
         />
       </div>

@@ -10,4 +10,8 @@ public class Driver
     public string? Name { get; set; }
     public string? Nationality { get; set; }
     //Image
+
+    public string? Image { get; set; }
+
+
 }

@@ -52,7 +52,7 @@ export function TeamCard(props) {
         </div>
         <img
           height={1}
-          src="https://placehold.co/100"
+          src={`http://localhost:5000/images/${props.team.manufacturer}.png`}
           className="card-img-top"
           alt="Responsive image"
         ></img>
